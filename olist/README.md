@@ -19,8 +19,8 @@
 
 <p>Abra o terminal no diretorio raiz do projeto e insira os seguintes comandos:</p>
 ```bash
-<p>php artisan migrate:fresh</p>
-<p>php artisan serve</p>
+php artisan migrate:fresh
+php artisan serve
 ```
 
 ## Utilizando API
