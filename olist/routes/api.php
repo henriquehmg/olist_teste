@@ -23,7 +23,7 @@ Route::prefix('/tipo_produto')->group(function(){
     Route::get('/{id}', 'App\Http\Controllers\TiposProdutosController@show')->name('get_sigle_tipos_produto');
     Route::post('/', 'App\Http\Controllers\TiposProdutosController@store')->name('new_tipos_produto');
     Route::put('/{id}', 'App\Http\Controllers\TiposProdutosController@update')->name('update_tipos_produto');
-    Route::delete('/{id}', 'App\Http\Controllers\TiposProdutosController@delete')->name('delete_tipos_produto');
+    Route::delete('/{id}', 'App\Http\Controllers\TiposProdutosController@destroy')->name('delete_tipos_produto');
 });
 
 Route::prefix('/produto')->group(function(){
@@ -31,5 +31,5 @@ Route::prefix('/produto')->group(function(){
     Route::get('/{id}', 'App\Http\Controllers\ProdutosController@show')->name('get_sigle_produto');
     Route::post('/', 'App\Http\Controllers\ProdutosController@store')->name('new_produto');
     Route::put('/{id}', 'App\Http\Controllers\ProdutosController@update')->name('update_produto');
-    Route::delete('/{id}', 'App\Http\Controllers\ProdutosController@delete')->name('delete_produto');
+    Route::delete('/{id}', 'App\Http\Controllers\ProdutosController@destroy')->name('delete_produto');
 });

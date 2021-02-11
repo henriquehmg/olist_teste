@@ -38,7 +38,7 @@ class TiposProdutosController extends Controller
         ]);
         try{
             $TipoProdutoData = $request->all();
-            $this->produto->create($TipoProdutoData);
+            $this->tp_produto->create($TipoProdutoData);
             return response()->json(['msg' => 'Tipo de produto criado com sucesso', 'cod' => '201'], 201);
 
         } catch(\Exception $e){
