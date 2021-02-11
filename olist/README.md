@@ -87,6 +87,11 @@
 <p>Os retornos dessa APi são de base Json</p>
 
 
+## Testes
+<p>Para executar os testes dos EndPoints, abra o terminal na pasta raiz do projeto e execute:</p>
+<p>./vendor/bin/phpunit</p>
+
+
 ### Author: Henrique Maraschin Granja
 
 
