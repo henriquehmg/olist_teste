@@ -1,53 +1,38 @@
-## About Laravel
+## Requisitos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h3>Requisitos de Hardware e software para utilização da API</h3>
+<p>- Computador com Composer + Laravel 8.21.0 + Artisan + PHP 7.4.10 instalados em ambiente global</p>
+<p>- Banco de dados do tipo mariaDB ou MySQL devidamente instalado</p>
+<p>- HTTP client instalado, Ex.: <a href= 'https://www.postman.com/' target="_blank">Postman</a></p>
+<p>- Editor de texto/IDE para a edição das variáveis globais</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Configurando o ambiente
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p>Crie um Banco de dados e usuário com amplas permissões para essa base de dados.</p>
+<p>No editor de texto/IDE, acesso o arquivo .env. Dentro desse arquivo, edite as informações do banco de dados, inserindo as informações do banco de dados criado.</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Iniciando aplicação
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+<p>Abra o terminal no diretorio raiz do projeto e insira os seguintes comandos:</p>
+<p>php artisan migrate:fresh</p>
+<p>php artisan serve</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## Utilizando API
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p>Agora que o ambiente já está configurado, vamos ver como funciona a API</p>
 
-## Code of Conduct
+### Rotas
+<p>Todas as rotas partem do endereço {url}/api</p>
+<p>Para cessar as informações do produto, adicione no endereço /produto</p>
+<p>Para cessar as informações dos tipos de produto, adicione no endereço /tipo_produto</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>Todos os endpoints seguem o padrão dos verbos de requisição internacional (GET, POST, UPDATE, DELETE)</p>
+<p>Onde o verbo GET lista os registros contidos(Todos ou um específico)</p>
+<p>O verbo POST Grava um novo registro</p>
+<p>O verbo UPDATE atualiza o registro especificado</p>
+<p>O verbo DELETE Exclui, por soft delete, o registro especificado</p>
