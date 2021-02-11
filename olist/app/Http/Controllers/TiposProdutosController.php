@@ -33,6 +33,9 @@ class TiposProdutosController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nome'=>'required'
+        ]);
         try{
             $TipoProdutoData = $request->all();
             $this->produto->create($TipoProdutoData);

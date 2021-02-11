@@ -33,6 +33,10 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nome'=>'required',
+            'tipo'=>'required'
+        ]);
         try{
             $produtoData = $request->all();
             $this->produto->create($produtoData);
